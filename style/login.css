@@ -1,0 +1,454 @@
+/****** CLASSES GENÉRICAS ******/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout-grid {
+    width: 90%;
+    max-width: 375px;
+    margin: 0 auto;
+
+}
+
+.alinhamento-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alinhamento-around-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.alinhamento-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/****** FONTES IMPORTADAS ******/
+
+
+@font-face {
+    font-family: TitiliumWeb-black;
+    src: url(../assets/fonts/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: TitiliumWeb-bold;
+    src: url(../assets/fonts/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: TitiliumWeb-semibold;
+    src: url(../assets/fonts/TitilliumWeb-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: TitiliumWeb-regular;
+    src: url(../assets/fonts/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: TitiliumWeb-light;
+    src: url(../assets/fonts/TitilliumWeb-Light.ttf);
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../assets/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+
+/****** BODY ******/
+
+
+body {}
+
+
+
+
+/****** HEADER ******/
+
+header {
+    z-index: 20;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: #1B1426;
+    position: fixed;
+    width: 100vw;
+}
+
+
+/* Parte relacionada ao header top */
+
+.header-top {
+    display: none;
+
+
+
+}
+
+
+header .header-top .contatos {}
+
+header .header-top .phone {}
+
+header .header-top .email {}
+
+header .header-top .redes-sociais {}
+
+
+/* Parte relacionada ao header bottom */
+
+
+.header-bottom {}
+
+header .header-bottom .contatos {}
+
+header .header-bottom .phone {
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 15px;
+    border-bottom: 1px solid #F9AA01;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+header .header-bottom .email {
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 15px;
+    margin-top: 25px;
+
+}
+
+header .header-bottom .redes-sociais {
+    border-bottom: none;
+    display: flex;
+    width: 40vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 110px;
+    margin-bottom: 20px;
+}
+
+
+header .header-bottom .logo {
+    height: 55px;
+    width: 196px;
+}
+
+header .header-bottom nav {}
+
+
+header .header-bottom nav a {
+    text-decoration: none;
+    border-bottom: 1px solid #F9AA01;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+header .header-bottom .menu-navegacao>a:hover {
+    color: #F9AA01;
+}
+
+header .header-bottom a {
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+header .header-bottom .icon-menu-nav {}
+
+
+
+header .header-bottom .menu-navegacao {
+    position: fixed;
+    top: 60px;
+    left: -80vw;
+    width: 80vw;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    z-index: 21;
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(10px);
+    transition: left 0.4s;
+}
+
+.mostraromenu {
+    left: 0 !important;
+}
+
+.mostraromenuuser {
+    right: 0 !important;
+}
+
+header .header-bottom .menu-navegacao a {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+
+header .header-bottom nav>a:first-of-type {
+    color: #F9AA01;
+}
+
+
+
+header .header-bottom .menu-usuario {
+    background-image: linear-gradient(to right bottom, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.4));
+    backdrop-filter: blur(10px);
+    position: fixed;
+    right: -15vw;
+    top: 60px;
+    width: 15vw;
+    padding: 10px;
+    height: calc(30vh - 60px);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.4s;
+
+}
+
+
+
+
+
+header .header-bottom .icon-menu-elipse {}
+
+#email-icon {
+    margin-right: 15px;
+}
+
+#phone-icon {
+    margin-right: 15px;
+}
+
+
+
+
+
+
+/* MAIN */
+
+main {
+    height: 665px;
+    width: 100%;
+    margin-top: 60px;
+    background-image: url(../assets/images/Banner_Login.png);
+}
+
+
+.main-flex {display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* PARTE DO FORMULARIO DE LOGIN */
+
+
+main input::placeholder {
+    color: white;
+}
+
+
+main .box-input {border: #F9AA01 1px solid;
+    height: 40px;
+    width: 273px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    background-image: linear-gradient(to right bottom, rgba(239, 239, 239, .6), rgba(239, 239, 239, .1));
+    backdrop-filter: blur(6px);
+    border: 1px white solid;
+    }
+
+
+main input {height: 40px;
+    width: 273px;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+
+
+/****** FOOTER ******/
+
+footer {
+    box-shadow: inset 0 30px 60px rgba(0, 0, 0, 1);
+    background-image: url(../assets/images/backgroung_footer.png);
+    background-position: top;
+    background-size: contain;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+footer .footer-top .logo {
+    width: 110px;
+}
+
+.titulo-footer {}
+
+footer .footer-top .logo-redes-sociais .texto-footer {
+    font-family: Quicksand;
+    font-size: 14px;
+    font-weight: normal;
+    color: white;
+}
+
+.logo-redes-sociais {
+    width: 100%;
+    height: 304px;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .footer-top .redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+footer .footer-top .links-uteis {}
+
+
+footer .footer-top .links-uteis a {
+    color: white;
+    text-decoration: none;
+    font-family: TitiliumWeb-bold;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer .footer-top .links-uteis .menu-footer {
+    padding-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .footer-top .links-uteis .menu-footer li {list-style-type: none;
+width: 110px;
+margin-bottom: 20px;
+
+}
+
+footer .footer-top .menu-footer a::before {content: "\2015";
+margin-right: 10px;
+color: #F9AA01;}
+
+footer .footer-top .contatos p {color: white;
+    padding-top: 45px;
+    font-family: TitiliumWeb-bold;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+footer .footer-top .contatos-titulo {color: #F9AA01;}
+
+footer .footer-top .titulo-footer {
+    font-family: TitiliumWeb-black;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    margin-top: 130px;
+}
+
+footer .footer-top .titulo-footer hr {border: 2px solid #F9AA01;
+width: 112px;
+}
+
+
+footer .footer-top .newsletter hr {margin-bottom: 30px;}
+
+footer .footer-top .newsletter input, 
+footer .footer-top .newsletter .button {width: 100%;
+height: 50px;
+border-radius: 8px;
+padding: 30px;}
+
+
+footer .footer-top .newsletter input {background-color: transparent;
+background-image: linear-gradient(to right bottom , rgba(239, 239, 239, .6), rgba(239, 239, 239, .1));
+backdrop-filter: blur(6px);
+border: 1px white solid;
+color: white;
+padding: 5px 10px;
+font-family: TitiliumWeb-regular;
+font-size: 16px;}
+
+footer .footer-top .newsletter input::placeholder {color: white;}
+
+
+
+footer .newsletter .button {display: flex;
+justify-content: center;
+align-items: center;
+background-color: #F9AA01;
+font-family: TitiliumWeb-regular;
+font-size: 16px;
+margin-top: 20px;
+}
+
+
+
+.ancestral-icon-allup {position: relative;
+width: 100%;
+}
+
+#all-up-icon {
+    position: absolute;
+    right: 60px;
+    bottom: 160px;
+}
+
+/* FOOTER BOTTOM */
+
+footer .footer-bottom {width: 100%;
+    display: flex;
+align-items: center;
+justify-content: center;}
+
+footer .footer-bottom p {color: white;
+    margin-top: 20px
+}
+
+
