@@ -21,6 +21,13 @@
     align-items: center;
 }
 
+.alinhamento-between-center-coluna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
 .alinhamento-around-center {
     display: flex;
     justify-content: space-around;
@@ -274,6 +281,7 @@ main {
 .main-flex {display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 665px;
     width: 100%;
 }
@@ -286,7 +294,7 @@ main input::placeholder {
 }
 
 
-main .box-input {border: #F9AA01 1px solid;
+main .box-email {
     height: 40px;
     width: 273px;
     display: flex;
@@ -298,18 +306,97 @@ main .box-input {border: #F9AA01 1px solid;
     backdrop-filter: blur(6px);
     border: 1px white solid;
     border-radius: 8px;
+    border-image: linear-gradient(to right bottom, rgba(239, 239, 239, .8), rgba(239, 239, 239, .1) );
     }
 
+    main .box-password {
+        height: 40px;
+        width: 273px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        background-color: transparent;
+        background-image: linear-gradient(to right bottom, rgba(239, 239, 239, .6), rgba(239, 239, 239, .1));
+        backdrop-filter: blur(6px);
+        border: 1px white solid;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        }
+
+
+    #icon-key  {margin-left: 15px;}
     #icon-user {margin-left: 15px;}
 
-main input {height: 40px;
+
+    /* Classe destinadas ao INPUT do login do usuario */
+    
+main .login {height: 40px;
     width: 273px;
     background-color: transparent;
     border: none;
+    color: white;
+    border-style: hidden;
+outline: none;}
+
+main .password-do-login {height: 40px;
+    width: 273px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-style: hidden;
+    outline: none;
 }
+
 
 .placeholder {color: white;}
 
+/* Box do login e contents dentro */
+
+.box-do-login {width: 335px;
+height: 462px;
+border: white 1px solid;
+border-radius: 8px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.box-titulo-login {display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+   }
+
+
+   main .box-titulo-login h1 {color: white;
+    font-family: TitiliumWeb-black;
+    font-size: 28px;
+    font-weight: 900;
+text-transform: uppercase;}
+
+.tamanho-box-inputs-login {height: 120px;
+width: 100%;
+}
+
+
+main .box-titulo-login hr {border-color: #F9AA01;
+width: 90px;}
+
+main .button-logar {
+    height: 40px;
+    width: 273px;
+    background-color: #F9AA01;
+    border-radius: 8px;
+    font-family: TitiliumWeb-bold;
+    line-height: 37px;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
 
 
 
